@@ -1,6 +1,19 @@
 <x-layout>
 
-    <h1 class="text-red-500 text-xl">Hello word</h1>
+    <section class="px-6">
 
-    <livewire:create-code>
+        <div class="container mx-auto">
+            
+            <header class="flex justify-center">
+
+                <h1>
+                    <img src="/logo.svg" alt="CodeBreaker" aria-label="Codebreaker">
+                </h1>
+            </header>
+
+            <div class="container">
+                <livewire:create-code/>
+            </div>
+        </div>
+    </section>
 </x-layout>
