@@ -3,17 +3,21 @@
     'letters'
 ])
 
-<div {{ $attributes->class(['text-white text-center flex gap-7']) }}>
+<div {{ $attributes->class(['text-center flex flex-wrap gap-7 mt-auto']) }}>
     @foreach ( explode(' ', $message) as $word)
 
-        <div class="word">
+        <div class="word flex gap-x-2">
 
             @foreach (str_split($word) as $character)
 
-                <span class="material-symbols-outlined character">
+                <div>
 
-                    {{ $letters[ strtolower($character) ] ?? $character }}
-                </span>
+                    <span class="material-symbols-outlined character !text-4xl">
+
+                        {{ $letters[ strtolower($character) ] ?? $character }}
+                    </span>
+                    <div class="bg-gray-200 w-12 h-12"></div>
+                </div>
             @endforeach
         </div>
     @endforeach
